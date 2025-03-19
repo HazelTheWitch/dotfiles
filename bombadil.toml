@@ -1,10 +1,10 @@
 dotfiles_dir = "dotfiles"
 
 [settings]
-vars = [
-    "vars/general.toml",
-    "vars/theme.toml",
-]
+vars = ["vars.toml"]
+
+[profiles.laptop]
+vars = ["laptop.toml"]
 
 [settings.dots]
 nvim = { source = "nvim", target = ".config/nvim" }

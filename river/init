@@ -51,3 +51,7 @@ liatile &
 riverctl border-color-focused 0xf1a7be
 riverctl border-color-unfocused 0xd996ab
 riverctl border color-urgent 0xe6576f
+
+{% for output in outputs %}
+    riverctl spawn "wlr-randr --output {{ output.output }} --scale {{ output.scale }}"
+{% endfor %}
