@@ -21,8 +21,8 @@ riverctl map normal Super Comma focus-output previous
 riverctl map normal Super+Shift Period send-to-output next
 riverctl map normal Super+Shift Comma send-to-output previous
 
-# Zoom on focused window
-riverctl map normal Super Return zoom
+# Runner
+riverctl map normal Super R spawn "rofi -show drun"
 
 # Tags
 for i in $(seq 0 9)
@@ -45,13 +45,20 @@ riverctl set-repeat 50 300
 
 # Use liatile
 riverctl default-layout liatile
-liatile &
+riverctl spawn liatile
 
 # Set up colors
 riverctl border-color-focused 0xf1a7be
 riverctl border-color-unfocused 0xd996ab
-riverctl border color-urgent 0xe6576f
+riverctl border-color-urgent 0xe6576f
 
+# Fix environment
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+systemctl --user restart xdg-desktop-portal
+
+{% if outputs %}
 {% for output in outputs %}
     riverctl spawn "wlr-randr --output {{ output.output }} --scale {{ output.scale }}"
 {% endfor %}
+{% endif %}

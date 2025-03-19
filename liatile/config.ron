@@ -1,0 +1,36 @@
+(
+  layouts: [
+    (
+      name: Some("monacle"),
+      root: Leaf(window: Some(0)),
+    ),
+    (
+      name: Some("50_50"),
+      root: Node(
+        children: [
+          Leaf(window: Some(0)),
+          Leaf(window: Some(1)),
+        ],
+      ),
+    ),
+    (
+      name: Some("n_pane"),
+      root: Node(
+        children: [
+          Node(
+            layout: (flex_direction: Column),
+            children: [Leaf()],
+          ),
+          Leaf(
+            layout: (max_size: (width: Percent(0.5), height: Auto), min_size: (width: Percent(0.5), height: Auto)),
+            window: Some(0),
+          ),
+          Node(
+            layout: (flex_direction: Column),
+            children: [Leaf()],
+          )
+        ],
+      ),
+    ),
+  ],
+)

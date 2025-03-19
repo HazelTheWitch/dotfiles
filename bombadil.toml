@@ -11,3 +11,5 @@ nvim = { source = "nvim", target = ".config/nvim" }
 alacritty = { source = "alacritty", target = ".config/alacritty" }
 tmux = { source = "tmux.conf", target = ".tmux.conf" }
 river = { source = "river", target = ".config/river" }
+oh-my-zsh = { source = "guuji.zsh-theme", target = ".oh-my-zsh/custom/themes/guuji.zsh-theme" }
+liatile = { source = "liatile", target = ".config/liatile" }
