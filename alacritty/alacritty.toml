@@ -1,0 +1,21 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = {{ font.size }}
+
+[font.normal]
+family = "{{ font.family }}"
+style = "Regular"
+
+[font.italic]
+family = "{{ font.family }}"
+style = "Italic"
+
+[font.bold]
+family = "{{ font.family }}"
+style = "Bold"
+
+[font.bold_italic]
+family = "{{ font.family }}"
+style = "Bold Italic"

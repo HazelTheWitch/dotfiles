@@ -1,0 +1,53 @@
+riverctl map normal Super Q spawn alacritty
+riverctl map normal Super C close
+
+# Change focus with arrow keys
+riverctl map normal Super Right focus-view right
+riverctl map normal Super Left focus-view left
+riverctl map normal Super Up focus-view up
+riverctl map normal Super Down focus-view down
+
+# Move windows with arrow keys
+riverctl map normal Super+Shift Right swap right
+riverctl map normal Super+Shift Left swap left
+riverctl map normal Super+Shift Up swap up
+riverctl map normal Super+Shift Down swap down
+
+# Change focused output
+riverctl map normal Super Period focus-output next
+riverctl map normal Super Comma focus-output previous
+
+# Move windows between outputs
+riverctl map normal Super+Shift Period send-to-output next
+riverctl map normal Super+Shift Comma send-to-output previous
+
+# Zoom on focused window
+riverctl map normal Super Return zoom
+
+# Tags
+for i in $(seq 0 9)
+do 
+    tags=$((1 << $i))
+    key=$((($i + 1) % 10))
+
+    # Focus Tags
+    riverctl map normal Super $key set-focused-tags $tags
+    
+    # Move window to tag
+    riverctl map normal Super+Shift $key set-view-tags $tags
+
+    # Toggle tag for window
+    riverctl map normal Super+Shift+Control $key toggle-view-tags $tags
+done
+
+# Set keyboard repeat rate
+riverctl set-repeat 50 300
+
+# Use liatile
+riverctl default-layout liatile
+liatile &
+
+# Set up colors
+riverctl border-color-focused 0xf1a7be
+riverctl border-color-unfocused 0xd996ab
+riverctl border color-urgent 0xe6576f

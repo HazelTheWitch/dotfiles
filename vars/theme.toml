@@ -1,0 +1,5 @@
+gtk_theme = "Fluent-Dark"
+
+[font]
+family = "Terminess Nerd Font"
+size = 12
