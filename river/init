@@ -51,11 +51,22 @@ riverctl spawn liatile
 riverctl border-color-focused 0xf1a7be
 riverctl border-color-unfocused 0xd996ab
 riverctl border-color-urgent 0xe6576f
+riverctl background-color 0x33252e
+riverctl border-width 1
+
+# Screenshots
+riverctl map normal Super Print spawn 'grim -g "$(slurp)" - | wl-copy'
+
+# Launch Waybar
+riverctl spawn waybar
 
 # Fix environment
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 systemctl --user restart xdg-desktop-portal
+
+# Set gtk theme
+gsettings set org.gnome.desktop.interface gtk-theme {{ gtk_theme }}
 
 {% if outputs %}
 {% for output in outputs %}

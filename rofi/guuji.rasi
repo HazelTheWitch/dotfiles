@@ -1,0 +1,47 @@
+
+entry {
+    placeholder: "";
+}
+
+* {
+    background-color: transparent;
+
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 40%;
+    padding: 12;
+    font: "{{ font.family }} {{ font.size }}";
+}
+
+inputbar {
+    spacing: 6;
+}
+
+mainbox {
+    spacing: 6;
+}
+
+listview {
+    spacing: 2;
+}
+
+window, element, listview, inputbar, prompt, entry {
+    text-color: {{ theme.text.base }};
+    background-color: {{ theme.background.bright }};
+}
+
+element-text {
+    text-color: inherit;
+}
+
+element selected {
+    text-color: {{ theme.highlight.base }};
+}
+
+listview {
+    columns: 2;
+}

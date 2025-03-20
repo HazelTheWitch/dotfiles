@@ -7,6 +7,7 @@
     (
       name: Some("50_50"),
       root: Node(
+        layout: (gap: (width: Length(5), height: Length(5))),
         children: [
           Leaf(window: Some(0)),
           Leaf(window: Some(1)),
@@ -16,9 +17,10 @@
     (
       name: Some("n_pane"),
       root: Node(
+        layout: (gap: (width: Length(5), height: Length(5))),
         children: [
           Node(
-            layout: (flex_direction: Column),
+            layout: (flex_direction: Column, gap: (width: Length(5), height: Length(5))),
             children: [Leaf()],
           ),
           Leaf(
@@ -26,7 +28,7 @@
             window: Some(0),
           ),
           Node(
-            layout: (flex_direction: Column),
+            layout: (flex_direction: Column, gap: (width: Length(5), height: Length(5))),
             children: [Leaf()],
           )
         ],

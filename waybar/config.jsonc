@@ -1,0 +1,47 @@
+[
+    {
+        "position": "top",
+        "height": 20,
+        "name": "status",
+        "modules-left": [
+            "user",
+        ],
+        "modules-center": ["clock"],
+        "modules-right": [
+            "tray",
+            "cpu",
+            "memory",
+            "disk",
+            "network",
+            "custom/updates",
+        ],
+        "custom/updates": {
+            "format": "{} out of date",
+            "return-type": "json",
+            "exec-if": "which waybar-module-pacman-updates",
+            "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300",
+        },
+        "disk": {
+            "format": "disk {percentage_used}%",
+        },
+        "clock": {
+          "format": "{:%Y-%m-%d %I:%M %p}",
+          "tooltip": false,
+        },
+        "memory": {
+            "format": "memory {}%"
+        },
+        "cpu": {
+            "format": "cpu {}%",
+            "tooltip": false,
+        },
+        "network": {
+            "format": "{bandwidthUpBits} up / {bandwidthDownBits} down",
+            "tooltip": false,
+        },
+        "user": {
+            "format": "{user}",
+            "open-on-click": false,
+        }
+    }
+]

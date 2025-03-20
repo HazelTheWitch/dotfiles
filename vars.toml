@@ -1,6 +1,11 @@
 user = "aurelia"
-gtk_theme = "Fluent-Dark"
+gtk_theme = "Fluent-pink-Dark"
 
 [font]
 family = "Terminess Nerd Font"
 size = 12
+
+[theme]
+highlight = { base = "#f1a7be", dim = "#d996ab", bright = "#f2b0c5" }
+text = { base = "#f9dce5", dim = "#f7cad8", bright = "#fcedf2" }
+background = { base = "#0d080a", dim = "#0c0709", bright = "#252123" }

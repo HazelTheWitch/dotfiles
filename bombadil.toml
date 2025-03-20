@@ -1,6 +1,12 @@
 dotfiles_dir = "dotfiles"
 
 [settings]
+prehooks = [
+    "killall waybar",
+]
+posthooks = [
+    "riverctl spawn waybar",
+]
 vars = ["vars.toml"]
 
 [profiles.laptop]
@@ -13,3 +19,6 @@ tmux = { source = "tmux.conf", target = ".tmux.conf" }
 river = { source = "river", target = ".config/river" }
 oh-my-zsh = { source = "guuji.zsh-theme", target = ".oh-my-zsh/custom/themes/guuji.zsh-theme" }
 liatile = { source = "liatile", target = ".config/liatile" }
+waybar = { source = "waybar", target = ".config/waybar" }
+rofi = { source = "rofi", target = ".config/rofi" }
+zsh = { source = ".zshrc", target = ".zshrc" }

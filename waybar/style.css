@@ -1,0 +1,13 @@
+* {
+  font-family: {{ font.family }};
+  font-size: {{ font.size }}pt;
+}
+
+window#waybar {
+  color: {{ theme.highlight.base }};
+  background-color: {{ theme.background.bright }};
+}
+
+.module {
+  padding: 0 10px;
+}
