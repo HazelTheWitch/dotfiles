@@ -57,8 +57,9 @@ riverctl border-width 1
 # Screenshots
 riverctl map normal Super Print spawn 'grim -g "$(slurp)" - | wl-copy'
 
-# Launch Waybar
+# Launch background processes
 riverctl spawn waybar
+riverctl spawn wired
 
 # Fix environment
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP

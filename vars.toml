@@ -5,6 +5,9 @@ gtk_theme = "Fluent-pink-Dark"
 family = "Terminess Nerd Font"
 size = 12
 
+[bar]
+height = 20
+
 [theme]
 highlight = { base = "#f1a7be", dim = "#d996ab", bright = "#f2b0c5" }
 text = { base = "#f9dce5", dim = "#f7cad8", bright = "#fcedf2" }

@@ -22,3 +22,4 @@ liatile = { source = "liatile", target = ".config/liatile" }
 waybar = { source = "waybar", target = ".config/waybar" }
 rofi = { source = "rofi", target = ".config/rofi" }
 zsh = { source = ".zshrc", target = ".zshrc" }
+wired = { source = "wired", target = ".config/wired" }
