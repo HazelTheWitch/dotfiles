@@ -11,3 +11,7 @@ window#waybar {
 .module {
   padding: 0 10px;
 }
+
+#workspaces button {
+  padding: 0 0;
+}

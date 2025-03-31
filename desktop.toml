@@ -1,11 +1,13 @@
 [[outputs]]
 output = "Acer Technologies KG241Q P 0x94108FEC"
 scale = 1
-mode = "1920x1080@143.854996Hz"
+resolution = "1920x1080"
+refresh_rate = "143.854996"
 position = "0,0"
 
 [[outputs]]
 output = "ASUSTek COMPUTER INC VG249Q3A SALMTF069234"
 scale = 1
-mode = "1920x1080@180.003006Hz"
+resolution = "1920x1080"
+refresh_rate = "180.003006"
 position = "1920,0"

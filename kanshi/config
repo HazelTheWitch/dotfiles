@@ -1,7 +1,0 @@
-{% if outputs %}
-profile {
-    {% for output in outputs %}
-    output "{{ output.output }}" mode {{ output.mode }} position {{ output.position }}
-    {% endfor %}
-}
-{% endif %}

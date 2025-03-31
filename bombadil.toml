@@ -5,21 +5,25 @@ prehooks = [
     "killall waybar",
 ]
 posthooks = [
-    "riverctl spawn waybar",
+    "swaymsg exec waybar",
+    "swaymsg reload",
+    "bash ~/dotfiles/make_executable.sh"
 ]
 vars = ["vars.toml"]
 
 [profiles.laptop]
 vars = ["laptop.toml"]
 
+[profiles.desktop]
+vars = ["desktop.toml"]
+
 [settings.dots]
 nvim = { source = "nvim", target = ".config/nvim" }
 alacritty = { source = "alacritty", target = ".config/alacritty" }
 tmux = { source = "tmux.conf", target = ".tmux.conf" }
-river = { source = "river", target = ".config/river" }
 oh-my-zsh = { source = "guuji.zsh-theme", target = ".oh-my-zsh/custom/themes/guuji.zsh-theme" }
-liatile = { source = "liatile", target = ".config/liatile" }
 waybar = { source = "waybar", target = ".config/waybar" }
 rofi = { source = "rofi", target = ".config/rofi" }
 zsh = { source = ".zshrc", target = ".zshrc" }
 wired = { source = "wired", target = ".config/wired" }
+swap = { source = "sway", target = ".config/sway" }

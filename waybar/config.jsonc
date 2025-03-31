@@ -5,6 +5,7 @@
         "name": "status",
         "modules-left": [
             "user",
+            "sway/workspaces",
         ],
         "modules-center": ["clock"],
         "modules-right": [
@@ -15,6 +16,9 @@
             "network",
             "custom/updates",
         ],
+        "sway/workspaces": {
+            "format": "•",
+        },
         "custom/updates": {
             "format": "{} out of date",
             "return-type": "json",
