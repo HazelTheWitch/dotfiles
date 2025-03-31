@@ -60,6 +60,7 @@ riverctl map normal Super Print spawn 'grim -g "$(slurp)" - | wl-copy'
 # Launch background processes
 riverctl spawn waybar
 riverctl spawn wired
+riverctl spawn kanshi
 
 # Fix environment
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -69,8 +70,13 @@ systemctl --user restart xdg-desktop-portal
 # Set gtk theme
 gsettings set org.gnome.desktop.interface gtk-theme {{ gtk_theme }}
 
+# Remove mouse accel
+riverctl input "*" accel-profile none
+
 {% if outputs %}
 {% for output in outputs %}
-    riverctl spawn "wlr-randr --output {{ output.output }} --scale {{ output.scale }}"
+{% if output.scale != 1 %}    
+riverctl spawn "wlr-randr --output '{{ output.output }}' --scale {{ output.scale }}"
+{% endif %}
 {% endfor %}
 {% endif %}
