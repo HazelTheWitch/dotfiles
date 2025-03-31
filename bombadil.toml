@@ -24,6 +24,8 @@ tmux = { source = "tmux.conf", target = ".tmux.conf" }
 oh-my-zsh = { source = "guuji.zsh-theme", target = ".oh-my-zsh/custom/themes/guuji.zsh-theme" }
 waybar = { source = "waybar", target = ".config/waybar" }
 rofi = { source = "rofi", target = ".config/rofi" }
-zsh = { source = ".zshrc", target = ".zshrc" }
+zshrc = { source = ".zshrc", target = ".zshrc" }
+zprofile = { source = ".zprofile", target = ".zprofile" }
 wired = { source = "wired", target = ".config/wired" }
-swap = { source = "sway", target = ".config/sway" }
+sway = { source = "sway", target = ".config/sway" }
+aura = { source = "aura", target = ".config/aura" }

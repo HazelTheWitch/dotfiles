@@ -1,3 +1,5 @@
+background = "~/Pictures/wallpaper.png"
+
 [[outputs]]
 output = "Acer Technologies KG241Q P 0x94108FEC"
 scale = 1

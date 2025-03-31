@@ -1,7 +1,7 @@
 #!/bin/env bash
 OUTPUTS=$(swaymsg -t get_outputs | jq 'length')
 
-for i in $(seq 1 $OUTPUTS); do
-    swaymsg workspace $i
+for i in $(seq 1 "$OUTPUTS"); do
+    swaymsg workspace "$i"
     swaymsg workspace "$i:1"
 done

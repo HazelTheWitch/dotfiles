@@ -14,7 +14,7 @@ set $menu rofi -show drun
 
 ### Output configuration
 {% for output in outputs %}
-output "{{ output.output }}" resolution {{ output.resolution }}@{{ output.refresh_rate }}Hz position {{ output.position }} scale {{ output.scale }} bg #33252e solid_color
+output "{{ output.output }}" resolution {{ output.resolution }}@{{ output.refresh_rate }}Hz position {{ output.position }} scale {{ output.scale }} bg {{ background }} fill
 {% endfor %}
 
 ### Border Configuration
