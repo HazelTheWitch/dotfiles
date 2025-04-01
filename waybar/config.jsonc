@@ -17,7 +17,7 @@
             "custom/updates",
         ],
         "sway/workspaces": {
-            "format": "•",
+            "format": "{name}",
         },
         "custom/updates": {
             "format": "{} out of date",
