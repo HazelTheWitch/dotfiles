@@ -1,0 +1,13 @@
+[Unit]
+Description=Scream Receiver
+After=pipewire-pulse.service network-online.target
+Requires=pipewire-pulse.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/scream -u -p 4011 -i enp11s0 -v
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,14 @@
+[general]
+bars = 0
+bar_width = 1
+bar_spacing = 1 
+autosens = 1
+
+[color]
+gradient = 1
+gradient_color_1 = '#FFFFFF'
+gradient_color_2 = '#F5A9B8'
+gradient_color_3 = '#5BCEFA'
+
+[output]
+orientation = horizontal

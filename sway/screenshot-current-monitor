@@ -1,0 +1,4 @@
+#!/bin/env bash
+OUTPUT="$(swaymsg -t get_outputs | jq --raw-output '.[]|select(.focused).name')"
+
+grim -o "$OUTPUT" - | wl-copy

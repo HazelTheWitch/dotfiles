@@ -3,6 +3,7 @@ dotfiles_dir = "dotfiles"
 [settings]
 prehooks = [
     "killall waybar",
+    "mkdir -p ~/.config/systemd/user",
 ]
 posthooks = [
     "swaymsg exec waybar",
@@ -11,11 +12,11 @@ posthooks = [
 ]
 vars = ["vars.toml"]
 
-[profiles.laptop]
-vars = ["laptop.toml"]
+[profiles.natalie]
+vars = ["natalie.toml"]
 
-[profiles.desktop]
-vars = ["desktop.toml"]
+[profiles.evelyn]
+vars = ["evelyn.toml"]
 
 [settings.dots]
 nvim = { source = "nvim", target = ".config/nvim" }
@@ -29,3 +30,8 @@ zprofile = { source = ".zprofile", target = ".zprofile" }
 wired = { source = "wired", target = ".config/wired" }
 sway = { source = "sway", target = ".config/sway" }
 aura = { source = "aura", target = ".config/aura" }
+mpv = { source = "mpv", target = ".config/mpv" }
+cava = { source = "cava", target = ".config/cava" }
+
+[profiles.evelyn.dots]
+scream = { source = "scream.service", target = ".config/systemd/user/scream.service" }
