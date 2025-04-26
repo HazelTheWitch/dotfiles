@@ -133,6 +133,9 @@ bindsym $mod+Shift+Print exec ~/.config/sway/screenshot-current-monitor
 # Floating Bitwarden
 for_window [app_id="^firefox$" title="^Extension: \(Bitwarden Password Manager\) - .*"] floating enable
 
+# Floating Xivlauncher
+for_window [class="XIVLauncher.Core"] floating enable
+
 # Start Bar
 exec waybar
 

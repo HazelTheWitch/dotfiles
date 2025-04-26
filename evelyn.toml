@@ -4,12 +4,12 @@ background = "~/Pictures/wallpaper.png"
 output = "Acer Technologies KG241Q P 0x94108FEC"
 scale = 1
 resolution = "1920x1080"
-refresh_rate = "143.854996"
+refresh_rate = "119.879"
 position = "0,0"
 
 [[outputs]]
 output = "ASUSTek COMPUTER INC VG249Q3A SALMTF069234"
 scale = 1
 resolution = "1920x1080"
-refresh_rate = "180.003006"
+refresh_rate = "165.003"
 position = "1920,0"

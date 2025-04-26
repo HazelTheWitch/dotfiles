@@ -6,7 +6,7 @@ family = "Terminess Nerd Font"
 size = 12
 
 [bar]
-height = 20
+height = 24
 
 [theme]
 highlight = { base = "#f1a7be", dim = "#d996ab", bright = "#f2b0c5" }

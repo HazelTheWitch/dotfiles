@@ -5,6 +5,7 @@
         "name": "status",
         "modules-left": [
             "user",
+            "cava",
             "sway/workspaces",
         ],
         "modules-center": ["clock"],
@@ -16,6 +17,12 @@
             "network",
             "custom/updates",
         ],
+        "cava": {
+            "method": "pipewire",
+            "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+            "bar_delimiter": 0,
+            "bars": 12,
+        },
         "sway/workspaces": {
             "format": "{name}",
         },
