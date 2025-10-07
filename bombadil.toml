@@ -2,13 +2,11 @@ dotfiles_dir = "dotfiles"
 
 [settings]
 prehooks = [
-    "killall waybar",
     "mkdir -p ~/.config/systemd/user",
 ]
 posthooks = [
-    "swaymsg exec waybar",
     "swaymsg reload",
-    "bash ~/dotfiles/make_executable.sh"
+    "systemctl --user daemon-reload; systemctl --user restart waybar",
 ]
 vars = ["vars.toml"]
 
@@ -32,6 +30,8 @@ sway = { source = "sway", target = ".config/sway" }
 aura = { source = "aura", target = ".config/aura" }
 mpv = { source = "mpv", target = ".config/mpv" }
 cava = { source = "cava", target = ".config/cava" }
+sway-service = { source = "systemd/sway-session.target", target = ".config/systemd/user/sway-session.target" }
+waybar-service = { source = "systemd/waybar.service", target = ".config/systemd/user/waybar.service" }
 
 [profiles.evelyn.dots]
 scream = { source = "scream.service", target = ".config/systemd/user/scream.service" }

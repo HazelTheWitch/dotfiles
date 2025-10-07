@@ -14,8 +14,10 @@ set $menu rofi -show drun
 
 ### Output configuration
 {% for output in outputs %}
-output "{{ output.output }}" resolution {{ output.resolution }}@{{ output.refresh_rate }}Hz position {{ output.position }} scale {{ output.scale }} bg {{ background }} fill
+output "{{ output.output }}" resolution {{ output.resolution }}@{{ output.refresh_rate }}Hz position {{ output.position }} scale {{ output.scale }} bg {{ background }} fill allow_tearing yes
 {% endfor %}
+
+output * adaptive_sync off
 
 ### Border Configuration
 default_border pixel 1
@@ -140,3 +142,6 @@ for_window [class="XIVLauncher.Core"] floating enable
 exec waybar
 
 include /etc/sway/config.d/*
+
+exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
+exec swaymsg -t subscribe '["shutdown"]' && systemctl --user stop sway-session.target

@@ -105,3 +105,15 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="nvim"
 export PATH="/home/aurelia/.cargo/bin:$PATH"
+
+export JAVA_HOME=/opt/android-studio/jbr
+export ANDROID_HOME="$HOME/Android/Sdk"
+export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
+
+# bun completions
+[ -s "/home/aurelia/.bun/_bun" ] && source "/home/aurelia/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
