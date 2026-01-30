@@ -14,6 +14,7 @@
             "cpu",
             "memory",
             "disk",
+            "disk#dev",
             "network",
             "custom/updates",
         ],
@@ -34,6 +35,10 @@
         },
         "disk": {
             "format": "disk {percentage_used}%",
+        },
+        "disk#dev": {
+            "path": "/home/{{ user }}/Git",
+            "format": "dev disk {percentage_used}%",
         },
         "clock": {
           "format": "{:%Y-%m-%d %I:%M %p}",

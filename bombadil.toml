@@ -2,7 +2,8 @@ dotfiles_dir = "dotfiles"
 
 [settings]
 prehooks = [
-    "mkdir -p ~/.config/systemd/user",
+    "killall waybar",
+    "mkdir -p ~/.local/state/mpd"
 ]
 posthooks = [
     "swaymsg reload",
@@ -30,8 +31,5 @@ sway = { source = "sway", target = ".config/sway" }
 aura = { source = "aura", target = ".config/aura" }
 mpv = { source = "mpv", target = ".config/mpv" }
 cava = { source = "cava", target = ".config/cava" }
-sway-service = { source = "systemd/sway-session.target", target = ".config/systemd/user/sway-session.target" }
-waybar-service = { source = "systemd/waybar.service", target = ".config/systemd/user/waybar.service" }
-
-[profiles.evelyn.dots]
-scream = { source = "scream.service", target = ".config/systemd/user/scream.service" }
+systemd = { source = "systemd", target = ".config/systemd/user" }
+dl-song = { source = "dl-song", target = ".local/bin/dl-song" }

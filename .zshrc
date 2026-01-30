@@ -117,3 +117,5 @@ export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# deno
+export PATH="/home/aurelia/.deno/bin:$PATH"

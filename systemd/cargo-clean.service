@@ -1,0 +1,6 @@
+[Unit]
+Description=Cargo clean job
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/cargo clean-all --keep-days 7 /home/{{ user }}/Git --yes

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo yt-dlp -t mp3 --embed-thumbnail --embed-metadata -P /mnt/music --output "%(title)s [%(id)s].%(ext)s" "$1"
